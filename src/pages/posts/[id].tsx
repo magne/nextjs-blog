@@ -18,6 +18,10 @@ export default function Post({
     <Layout>
       <Head>
         <title>{postData.title}</title>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/prismjs/themes/prism-okaidia.css"
+        ></link>
       </Head>
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>

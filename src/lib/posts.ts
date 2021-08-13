@@ -1,8 +1,12 @@
+import deepmerge from "deepmerge";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
-import { remark } from "remark";
-import html from "remark-html";
+import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
+import rehypeStringify from "rehype-stringify";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import { unified } from "unified";
 
 const postsDirectory = path.join(process.cwd(), "content", "posts");
 
@@ -54,9 +58,17 @@ export async function getPostData(id: string) {
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
 
+  const schema = deepmerge(defaultSchema, { tagNames: ["math", "mi"] });
+
   // Use remark to convert markdown into HTML string
-  const processedContent = await remark()
-    .use(html)
+  const processedContent = await unified()
+    .use(remarkParse)
+    .use(require('remark-prism'), {
+      /* options */
+    })
+    .use(remarkRehype)
+    //.use(rehypeSanitize)
+    .use(rehypeStringify)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 
