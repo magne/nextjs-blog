@@ -1,61 +1,58 @@
-import styled from "@emotion/styled";
-import { NextPage } from "next";
-import dynamic from "next/dynamic";
-import { useEffect } from "react";
+import { GetStaticProps } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import Date from "../components/date";
+import Layout, { siteTitle } from "../components/layout";
+import { getSortedPostsData } from "../lib/posts";
+import utilStyles from "../styles/utils.module.css";
 
-const ThemeToggle = dynamic(() => import("../components/ThemeToggle"), {
-  ssr: false,
-});
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  padding-top: 35vh;
-`;
-
-const Home: NextPage = () => {
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'serviceWorker' in navigator && (window as any).workbox !== undefined) {
-      const wb = (window as any).workbox
-
-
-      // A common UX pattern for progressive web apps is to show a banner when a service worker has updated and waiting to install.
-      // NOTE: MUST set skipWaiting to false in next.config.js pwa object
-      // https://developers.google.com/web/tools/workbox/guides/advanced-recipes#offer_a_page_reload_for_users
-      const promptNewVersionAvailable = (event: any) => {
-        // `event.wasWaitingBeforeRegister` will be false if this is the first time the updated service worker is waiting.
-        // When `event.wasWaitingBeforeRegister` is true, a previously updated service worker is still waiting.
-        // You may want to customize the UI prompt accordingly.
-        if (confirm('A newer version of this web app is available, reload to update?')) {
-          wb.addEventListener('controlling', (event: any) => {
-            window.location.reload()
-          })
-
-          // Send a message to the waiting service worker, instructing it to activate.
-          wb.messageSkipWaiting()
-        } else {
-          console.log(
-            'User rejected to reload the web app, keep using old version. New version will be automatically load when user open the app next time.'
-          )
-        }
-      }
-
-      wb.addEventListener('waiting', promptNewVersionAvailable) 
-      
-      // never forget to call register as auto register is turned off in next.config.js
-      wb.register()
-    }
-  }, [])
-  
+export default function Home({
+  allPostsData,
+}: {
+  allPostsData: {
+    date: string;
+    title: string;
+    id: string;
+  }[];
+}) {
   return (
-    <Container>
-      <main>
-        <h1>Next.js dark mode toggle</h1>
-        <h4>Dark mode is more than just a gimmic, right?!</h4>
-        <ThemeToggle />
-      </main>
-    </Container>
-  );
-};
+    <Layout home>
+      <Head>
+        <title>{siteTitle}</title>
+      </Head>
+      <section className={utilStyles.headingMd}>
+        <p>[Your Self Introduction]</p>
+        <p>
+          (This is a sample website - you’ll be building a site like this on{" "}
+          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+        </p>
+      </section>
 
-export default Home;
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <ul className={utilStyles.list}>
+          {allPostsData.map(({ id, date, title }) => (
+            <li className={utilStyles.listItem} key={id}>
+              <Link href={`/posts/${id}`}>
+                <a>{title}</a>
+              </Link>
+              <br />
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </Layout>
+  );
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+};
