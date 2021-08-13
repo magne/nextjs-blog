@@ -3,6 +3,8 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import rehypeSanitize, { defaultSchema } from "rehype-sanitize";
+import remarkMath from 'remark-math'
+import rehypeMathJax from 'rehype-mathjax'
 import rehypeStringify from "rehype-stringify";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
@@ -66,7 +68,9 @@ export async function getPostData(id: string) {
     .use(require('remark-prism'), {
       /* options */
     })
+    .use(remarkMath)
     .use(remarkRehype)
+    .use(rehypeMathJax)
     //.use(rehypeSanitize)
     .use(rehypeStringify)
     .process(matterResult.content);
