@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.15.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
+    "chalk": "^4.1.2",
     "date-fns": "^2.23.0",
     "esbuild": "^0.12.20",
     "gray-matter": "^4.0.3",

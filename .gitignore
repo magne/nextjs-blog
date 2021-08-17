@@ -48,3 +48,11 @@ public/sw.js.map
 public/fallback-*.js
 public/workbox-*.js
 public/workbox-*.js.map
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
