@@ -1,10 +1,8 @@
-import { getMDXComponent } from 'mdx-bundler/client'
 import { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType, NextPage } from 'next'
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import Head from 'next/head'
-import { useMemo } from 'react'
 import Date from '../../../components/date'
 import Layout from '../../../components/layout'
+import { MDX } from '../../../components/MDX'
 import { getPostFromSlug, getPosts } from '../../../lib/data/posts'
 import { log } from '../../../lib/functions/log'
 import utilStyles from '../../../styles/utils.module.css'
@@ -57,7 +55,6 @@ export const getStaticProps = async ({
 }
 
 const PostPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ post, variant, source }) => {
-  const Component = useMemo(() => (variant === 'bundler' ? getMDXComponent(source as string) : null), [variant, source])
   return (
     <Layout>
       <Head>
@@ -75,26 +72,7 @@ const PostPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ po
         <div className={utilStyles.lightText}>
           <Date dateString={post.date} />
         </div>
-        {variant == 'unified' ? (
-          <>
-            <h3>Using unified toolchain</h3>
-            <div dangerouslySetInnerHTML={{ __html: source as string }} />
-          </>
-        ) : variant == 'bundler' ? (
-          <>
-            <h3>Using mdx-bundler</h3>
-            {Component ? <Component /> : <h3 color="tomato">Component not set</h3>}
-          </>
-        ) : variant == 'remote' ? (
-          <>
-            <h3>Using next-mdx-remote</h3>
-            <div className="wrapper">
-              <MDXRemote {...(source as MDXRemoteSerializeResult)} />
-            </div>
-          </>
-        ) : (
-          <h3 color="red">Unknown variant: {{variant}}</h3>
-        )}
+        <MDX variant={variant} source={source} />
       </article>
     </Layout>
   )

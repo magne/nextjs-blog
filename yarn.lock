@@ -18,6 +18,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@arcath/utils@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "@arcath/utils@npm:0.7.0"
+  dependencies:
+    chalk: ^4.1.0
+    left-pad: ^1.3.0
+  checksum: 8af7bac0393f2a8582cba5ab6147be6c251b9bfbd6633994af5beb802c16e1c3cc1f311257fbf6469890203c812868ac1ecc6427317b89a8557718a64184d9c8
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:7.12.11":
   version: 7.12.11
   resolution: "@babel/code-frame@npm:7.12.11"
@@ -3236,7 +3246,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0, chalk@npm:^4.1.2":
+"chalk@npm:^4.0.0, chalk@npm:^4.1.0, chalk@npm:^4.1.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -3645,6 +3655,13 @@ __metadata:
     randombytes: ^2.0.0
     randomfill: ^1.0.3
   checksum: c1609af82605474262f3eaa07daa0b2140026bd264ab316d4bf1170272570dbe02f0c49e29407fe0d3634f96c507c27a19a6765fb856fed854a625f9d15618e2
+  languageName: node
+  linkType: hard
+
+"crypto-js@npm:^4.0.0":
+  version: 4.1.1
+  resolution: "crypto-js@npm:4.1.1"
+  checksum: b3747c12ee3a7632fab3b3e171ea50f78b182545f0714f6d3e7e2858385f0f4101a15f2517e033802ce9d12ba50a391575ff4638c9de3dd9b2c4bc47768d5425
   languageName: node
   linkType: hard
 
@@ -6193,6 +6210,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"left-pad@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "left-pad@npm:1.3.0"
+  checksum: 13fa96e17b70a54836490de22d4bab706e2ed508338bbabecfac72ecce445a74139c5b009a8112252cab8fc4ab7ac4ebd870e5b35bd236b443b12be96f8745ac
+  languageName: node
+  linkType: hard
+
 "leven@npm:^3.1.0":
   version: 3.1.0
   resolution: "leven@npm:3.1.0"
@@ -7418,6 +7442,7 @@ __metadata:
     remark-parse: ^10.0.0
     remark-prism: ^1.3.6
     remark-rehype: ^9.0.0
+    sodb: ^3.0.0
     typescript: 4.3.5
     unified: ^10.1.0
     webpack: ^5.50.0
@@ -9123,6 +9148,16 @@ resolve@^2.0.0-next.3:
     ip: ^1.1.5
     smart-buffer: ^4.1.0
   checksum: 2ca9d616e424f645838ebaabb04f85d94ea999e0f8393dc07f86c435af22ed88cb83958feeabd1bb7bc537c635ed47454255635502c6808a6df61af1f41af750
+  languageName: node
+  linkType: hard
+
+"sodb@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "sodb@npm:3.0.0"
+  dependencies:
+    "@arcath/utils": ^0.7.0
+    crypto-js: ^4.0.0
+  checksum: 2ba8b539e2481eb976bed8f735404ac7cd573498a4212d34ba676415d2963e9debecab05a5448b52b1cd156b85b9cacbf9df4d399101a8aae01c9075eb53fa1a
   languageName: node
   linkType: hard
 
