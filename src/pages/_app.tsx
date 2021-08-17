@@ -1,7 +1,8 @@
-import type { AppProps } from "next/app";
-import Head from "next/head";
+import type { AppProps } from 'next/app'
+import Head from 'next/head'
+import { TrackingProvider } from '../lib/contexts/ga'
 
-import "../styles/globals.css";
+import '../styles/globals.css'
 
 function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
@@ -12,9 +13,11 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
           content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
         />
       </Head>
-      <Component {...pageProps} />
+      <TrackingProvider>
+        <Component {...pageProps} />
+      </TrackingProvider>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

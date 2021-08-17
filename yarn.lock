@@ -4661,6 +4661,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"file-loader@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "file-loader@npm:6.2.0"
+  dependencies:
+    loader-utils: ^2.0.0
+    schema-utils: ^3.0.0
+  peerDependencies:
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: faf43eecf233f4897b0150aaa874eeeac214e4f9de49738a9e0ef734a30b5260059e85b7edadf852b98e415f875bd5f12587768a93fd52aaf2e479ecf95fab20
+  languageName: node
+  linkType: hard
+
 "file-uri-to-path@npm:1.0.0":
   version: 1.0.0
   resolution: "file-uri-to-path@npm:1.0.0"
@@ -7307,6 +7319,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"next-images@npm:^1.8.1":
+  version: 1.8.1
+  resolution: "next-images@npm:1.8.1"
+  dependencies:
+    file-loader: ^6.2.0
+    url-loader: ^4.1.0
+  peerDependencies:
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: 89f4b795649ab96fb76cc622662efdf669900e8fbf60b48b54b6c50d0a7e3a8d8bf917c9afaf1056ae83c9baf31e8b570eec88ffa13a72550db2417cc65ea4c2
+  languageName: node
+  linkType: hard
+
 "next-mdx-remote@npm:^3.0.4":
   version: 3.0.4
   resolution: "next-mdx-remote@npm:3.0.4"
@@ -7430,10 +7454,12 @@ __metadata:
     mdx-bundler: ^5.2.1
     next: 11.1.0
     next-compose-plugins: ^2.2.1
+    next-images: ^1.8.1
     next-mdx-remote: ^3.0.4
     next-pwa: ^5.2.24
     react: 17.0.2
     react-dom: 17.0.2
+    react-ga4: ^1.0.4
     rehype-katex: ^6.0.0
     rehype-mathjax: ^4.0.0
     rehype-sanitize: ^5.0.0
@@ -8341,6 +8367,13 @@ __metadata:
   peerDependencies:
     react: 17.0.2
   checksum: 1c1eaa3bca7c7228d24b70932e3d7c99e70d1d04e13bb0843bbf321582bc25d7961d6b8a6978a58a598af2af496d1cedcfb1bf65f6b0960a0a8161cb8dab743c
+  languageName: node
+  linkType: hard
+
+"react-ga4@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "react-ga4@npm:1.0.4"
+  checksum: 5e962f1a706a225cb9ce0f8fd796d7c51535f98ea2a7a944564d762834b4b6d13afce97b35361d47ca15aefaa37751d957250591ca6b81d3f4231bcc12295f91
   languageName: node
   linkType: hard
 
@@ -10307,6 +10340,23 @@ typescript@4.3.5:
   dependencies:
     punycode: ^2.1.0
   checksum: 7167432de6817fe8e9e0c9684f1d2de2bb688c94388f7569f7dbdb1587c9f4ca2a77962f134ec90be0cc4d004c939ff0d05acc9f34a0db39a3c797dada262633
+  languageName: node
+  linkType: hard
+
+"url-loader@npm:^4.1.0":
+  version: 4.1.1
+  resolution: "url-loader@npm:4.1.1"
+  dependencies:
+    loader-utils: ^2.0.0
+    mime-types: ^2.1.27
+    schema-utils: ^3.0.0
+  peerDependencies:
+    file-loader: "*"
+    webpack: ^4.0.0 || ^5.0.0
+  peerDependenciesMeta:
+    file-loader:
+      optional: true
+  checksum: c1122a992c6cff70a7e56dfc2b7474534d48eb40b2cc75467cde0c6972e7597faf8e43acb4f45f93c2473645dfd803bcbc20960b57544dd1e4c96e77f72ba6fd
   languageName: node
   linkType: hard
 
