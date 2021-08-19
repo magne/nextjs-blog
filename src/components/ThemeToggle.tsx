@@ -51,6 +51,18 @@ const ToggleThumb = styled.span<{ activeTheme: string }>`
       : "none"};
 `;
 
+export const setInitialTheme = `
+function getUserPreference() {
+  if (window.localStorage.getItem('theme')) {
+    return window.localStorage.getItem('theme')
+  }
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light'
+}
+document.body.dataset.theme = getUserPreference();
+`
+
 const ThemeToggle: FC = () => {
   const initialTheme = document.body.dataset.theme as string;
   const [activeTheme, setActiveTheme] = useState(initialTheme);

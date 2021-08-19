@@ -1,28 +1,19 @@
-import Head from "next/head";
-// import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import utilStyles from "../styles/utils.module.css";
-import styles from "./layout.module.css";
+import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
+import utilStyles from '../styles/utils.module.css'
+import styles from './layout.module.css'
 
-const name = "Your Name";
-export const siteTitle = "Next.js Sample Website";
+const name = 'Your Name'
+export const siteTitle = 'Next.js Sample Website'
 
-export default function Layout({
-  children,
-  home,
-}: {
-  children: React.ReactNode;
-  home?: boolean;
-}) {
+export default function Layout({ children, home }: { children: React.ReactNode; home?: boolean }) {
   return (
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
+        <meta name="description" content="Learn how to build a personal website using Next.js" />
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
@@ -35,28 +26,28 @@ export default function Layout({
       <header className={styles.header}>
         {home ? (
           <>
-            {/* <Image
+            <Image
               priority
               src="/images/profile.jpg"
               className={utilStyles.borderCircle}
               height={144}
               width={144}
               alt={name}
-            /> */}
+            />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
         ) : (
           <>
             <Link href="/">
               <a>
-                {/* <Image
+                <Image
                   priority
                   src="/images/profile.jpg"
                   className={utilStyles.borderCircle}
                   height={108}
                   width={108}
                   alt={name}
-                /> */}
+                />
               </a>
             </Link>
             <h2 className={utilStyles.headingLg}>
@@ -75,6 +66,7 @@ export default function Layout({
           </Link>
         </div>
       )}
+      <footer />
     </div>
-  );
+  )
 }

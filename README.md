@@ -42,7 +42,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [Adam Laycock](https://www.arcath.net)
   - [Improving Next.JS File Performance](https://www.arcath.net/2021/06/improving-nextjs-file-performance)
   - [Images with MDX-Bundler](https://www.arcath.net/2021/04/images-with-mdx-bundler)
-- [notJust //development](https://www.notjust.dev/blog)
+  - [Github](https://github.com/Arcath)
+    - [Blog](https://github.com/Arcath/arcath.net-next)
+    - [Utils](https://github.com/Arcath/utils)- [notJust //development](https://www.notjust.dev/blog)
   - [How I built the new notjust.dev platform with NextJS](https://www.notjust.dev/blog/2021-06-21-how-i-built-the-new-notjustdev-platoform-using-nextjs)
     - Posts in directories, with images (remark-mdx-images)
     - Site on [GitHub](https://github.com/Savinvadim1312/notjustdev)
@@ -65,6 +67,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
   - [Building a Blog with Next.js and MDX](https://johnpolacek.com/building-a-blog-with-nextjs-and-mdx)
 - [Dev.to](https://dev.to)
   - [Next.js & MDX w/ code highlighting](https://dev.to/mikeesto/next-js-mdx-w-code-highlighting-16fi)
+  - [No Fuss Dark-Mode Toggle with React & Styled-Components!](https://dev.to/hyggedev/no-fuss-dark-mode-toggle-with-react-styled-components-3nd4)
 - [Smashing Magazine](https://www.smashingmagazine.com)
   - [Creating A Multi-Author Blog With Next.js](https://www.smashingmagazine.com/2021/06/creating-multi-author-blog-nextjs/)
   - [Comparing Styling Methods In Next.js](https://www.smashingmagazine.com/2020/09/comparison-styling-methods-next-js/)
@@ -72,7 +75,19 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
   - [An Introduction to Unified and Remark](https://braincoke.fr/blog/2020/03/an-introduction-to-unified-and-remark/)
 - [Nrwl](https://blog.nrwl.io)
   - [Hot Reload MDX changes in Next.js and Nx](https://blog.nrwl.io/hot-reload-mdx-changes-in-next-js-and-nx-c05252cf450a)
-  
+- [web.dev](https://web.dev/blog/)
+  - [Ten modern layouts in one line of CSS](https://web.dev/one-line-layouts/)
+  - [Building a color scheme](https://web.dev/building-a-color-scheme/)
+  - [Preloading responsive images](https://web.dev/preload-responsive-images/)
+- [Themesberg](https://themesberg.com/blog)
+  - [Tailwind CSS tutorial](https://themesberg.com/blog/tailwind-css/tutorial) - Learn how to build websites using a utility-first CSS framework
+- [auth0](https://auth0.com/blog/)
+  - [Next.js Practical Introduction: Pages and Layout](https://auth0.com/blog/next-js-practical-introduction-for-react-developers-part-1/)
+  - [Next.js Practical Introduction: Styling and Theming](https://auth0.com/blog/next-js-practical-introduction-for-react-developers-part-2/)
+  - [Next.js Practical Introduction: Navigation and Routing](https://auth0.com/blog/next-js-practical-introduction-for-react-developers-part-3/)
+- [Medium](https://medium.com)
+  - [The Ultimate Guide To CSS Grid](https://jstutorial.medium.com/the-ultimate-guide-to-css-grid-2c5ba7b47356)
+
 ### Packages
 
 - MDX
@@ -80,3 +95,28 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
   - [xdm](https://github.com/wooorm/xdm)
   - [remark-mdx-images](https://github.com/remcohaszing/remark-mdx-images)
   - [next-mdx-remote](https://github.com/hashicorp/next-mdx-remote)
+
+### Technologies
+
+- [Next.js](https://nextjs.org)
+  - [Documentation](https://nextjs.org/docs/getting-started)
+- [TypeScript](https://www.typescriptlang.org/)
+  - [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html)
+- UI Toolkits
+  - [chakra](https://chakra-ui.com/)
+  - [FAST](https://www.fast.design/)
+- [Storybook](https://storybook.js.org/)
+  - [MSW Storybook Addon](https://msw-sb.netlify.app/?path=/story/guides-introduction--page) - easily mock the APIs inside stories.
+- [Mermaid](https://mermaid-js.github.io) Draw diagrams with markdown-like syntax.
+- CSS Grid
+  - [CSS Grid in Production](https://cssgrid.design)
+  - [Grid by Example](https://gridbyexample.com)
+  - [Interior](https://github.com/morganfeeney/interior)
+  - [Solved _by_ Grid](https://github.com/phiilu/solved-by-grid.now.sh)
+- CSS Normalize
+  - [Normalize.css - The best CSS Reset Library in 2021](https://ageek.dev/normalize-css)
+### Development
+
+- [Kool](https://kool.dev)
+- [A Gentle Introduction to Using a Docker Container as a Dev Environment](https://css-tricks.com/a-gentle-introduction-to-using-a-docker-container-as-a-dev-environment/)
+- [Developing inside a Container](https://code.visualstudio.com/docs/remote/containers)
