@@ -6,9 +6,9 @@ const withImages = require('next-images')
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   target: 'serverless',
-  reactStrictMode: true,
+  reactStrictMode: true
   // Prefer loading of ES Modules over CommonJS
-  experimental: { esmExternals: true }
+  // experimental: { esmExternals: true }
 }
 
 const config = withPlugins(

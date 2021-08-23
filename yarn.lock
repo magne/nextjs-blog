@@ -1291,7 +1291,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.14.6, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.4":
+"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.15.3, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.4":
   version: 7.15.3
   resolution: "@babel/runtime@npm:7.15.3"
   dependencies:
@@ -2034,14 +2034,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.17":
-  version: 17.0.17
-  resolution: "@types/react@npm:17.0.17"
+"@types/react@npm:^17.0":
+  version: 17.0.19
+  resolution: "@types/react@npm:17.0.19"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 3f2ae9ab6f7d5c7b480cd5962fe996f0682173036a8437cfde0122bc8594e0e1482864b766dbf611daef40ed65a9fc73ec9510e12511d68c064f309f25219f67
+  checksum: d5af52623dd863e5a9f64eb72979f19c21e03012e25ee93adc93f664ed7976e81b654128dc653b225ad5ba2aaae24e0febe37face272bb051d6289e23ed7177d
   languageName: node
   linkType: hard
 
@@ -2052,13 +2052,6 @@ __metadata:
     remark: ^12.0.0
     unified: ^9.2.1
   checksum: 293bfa17007a54e040aced34dc25eaa31aad3cf1f760c9a1e90d8780a88ca13686804ce16fba67c646fe9e767af48433366ea51a975b8f89a44c6901c8c096b6
-  languageName: node
-  linkType: hard
-
-"@types/repeat-string@npm:^1.0.0":
-  version: 1.6.1
-  resolution: "@types/repeat-string@npm:1.6.1"
-  checksum: fce594d206c74c3a6a548252f9c23aee978600f3263782507404d07c0ffa2d4fa31841e58c9c23fe24dd25c109b3edc14be37ab9e9a2562a85e7b5ab23da6714
   languageName: node
   linkType: hard
 
@@ -4142,7 +4135,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.12.20, esbuild@npm:^0.12.9":
+"esbuild@npm:^0.12.22":
+  version: 0.12.22
+  resolution: "esbuild@npm:0.12.22"
+  bin:
+    esbuild: bin/esbuild
+  checksum: db14cc10914d40a875da1b102cee7479ebe1b085cdc2deaa8e275468ada9bf3c6b793bd6004a031a9f2e34865fe629dc59030c5fe4820978f1cf071966aa2c5d
+  languageName: node
+  linkType: hard
+
+"esbuild@npm:^0.12.9":
   version: 0.12.20
   resolution: "esbuild@npm:0.12.20"
   bin:
@@ -4198,7 +4200,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:11.1.0":
+"eslint-config-next@npm:^11.1.0":
   version: 11.1.0
   resolution: "eslint-config-next@npm:11.1.0"
   dependencies:
@@ -4368,7 +4370,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:7.32.0":
+"eslint@npm:^7.32.0":
   version: 7.32.0
   resolution: "eslint@npm:7.32.0"
   dependencies:
@@ -4643,12 +4645,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fault@npm:^1.0.0":
-  version: 1.0.4
-  resolution: "fault@npm:1.0.4"
+"fault@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "fault@npm:2.0.0"
   dependencies:
     format: ^0.2.0
-  checksum: 5ac610d8b09424e0f2fa8cf913064372f2ee7140a203a79957f73ed557c0e79b1a3d096064d7f40bde8132a69204c1fe25ec23634c05c6da2da2039cff26c4e7
+  checksum: 5f228729086daee41769d9397173fcc3c5c769f28f91a6df7ee894ca90c87c6f3a23e5946b0a191f031a409ec25910c28189f8de35e12fe43919a86477d09a2e
   languageName: node
   linkType: hard
 
@@ -5241,16 +5243,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hast-util-to-text@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "hast-util-to-text@npm:3.0.0"
+"hast-util-to-text@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "hast-util-to-text@npm:3.1.0"
   dependencies:
     "@types/hast": ^2.0.0
-    "@types/repeat-string": ^1.0.0
     hast-util-is-element: ^2.0.0
-    repeat-string: ^1.0.0
     unist-util-find-after: ^4.0.0
-  checksum: fea4f36569b1c291e762ed2b152b648c419ea3ad0dc8941b359fcefe6511e2769fbee9db02300e8fd9fe3a229e3c1aa47d3400961bffdbfdee2793aceb6686ae
+  checksum: c4d144b94bf9077c3aa5ea9ace5330a0cab3fe570e0294b36610c8f87ac8adbbb3d50788e43f1ce22c0c97faa261d7d16747e20893e53fd6b37b205897b4b3a9
   languageName: node
   linkType: hard
 
@@ -6576,12 +6576,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mdast-util-frontmatter@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "mdast-util-frontmatter@npm:0.2.0"
+"mdast-util-frontmatter@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "mdast-util-frontmatter@npm:1.0.0"
   dependencies:
-    micromark-extension-frontmatter: ^0.2.0
-  checksum: 6dbed31233b34b41dd09da4756bbe3bd674fa3033c58f771f419e56675b8c7a601a18838d027fdb9cbef3b958346c661f7926ca401e154e63c071ecb2a3596a2
+    micromark-extension-frontmatter: ^1.0.0
+  checksum: 4fae0bd9f002e3b2a95829ab8d411a64cd7acf41de9c28fac8a70d6d96498efb6409c611e8433ce9e101b8b9d37a25ce3f9144dc7c06f0669ac5451460cc28e7
   languageName: node
   linkType: hard
 
@@ -6704,21 +6704,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mdx-bundler@npm:^5.2.1":
-  version: 5.2.1
-  resolution: "mdx-bundler@npm:5.2.1"
+"mdx-bundler@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "mdx-bundler@npm:6.0.1"
   dependencies:
-    "@babel/runtime": ^7.14.6
+    "@babel/runtime": ^7.15.3
     "@esbuild-plugins/node-resolve": ^0.1.4
     "@fal-works/esbuild-plugin-global-externals": ^2.1.2
     gray-matter: ^4.0.3
-    remark-frontmatter: ^3.0.0
+    remark-frontmatter: ^4.0.0
     remark-mdx-frontmatter: ^1.0.1
     uuid: ^8.3.2
-    xdm: ^1.12.2
+    xdm: ^2.0.0
   peerDependencies:
     esbuild: 0.11.x || 0.12.x
-  checksum: 95fb1402e0f37f9a7f73f8e82a96e9eabca314a1b7bdfdf2a182c50724ddaf26dba3e57e4e3fa0db24372695fa7b730e8953a5de39c41ade3ade9611afbfc276
+  checksum: 85f0e663a9aa1832b82f4d853567d811b1d4cfad5e8a91a441bd3f61b35ecbf80366c0151bf01fc063259940cfb621bd23998741e0266ce259858604ec1d3622
   languageName: node
   linkType: hard
 
@@ -6766,12 +6766,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromark-extension-frontmatter@npm:^0.2.0":
-  version: 0.2.2
-  resolution: "micromark-extension-frontmatter@npm:0.2.2"
+"micromark-extension-frontmatter@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "micromark-extension-frontmatter@npm:1.0.0"
   dependencies:
-    fault: ^1.0.0
-  checksum: b591494c2910162a47b4413b43d80b1e3f148c0d92955576737ff36525f34deb6cc784cdbede76c4ce6a9d06c75586c7198ffb84f97efee894cafabcc86716e4
+    fault: ^2.0.0
+    micromark-util-character: ^1.0.0
+    micromark-util-symbol: ^1.0.0
+  checksum: d0bacd6aadd6e33e26245628b93f5bcaf9a1de47787cea6807f8569213ceeb1376c37fadcf059280f5eafe6a07682bd148989e65489e99c9a3f4d523eea5f5c0
   languageName: node
   linkType: hard
 
@@ -7346,23 +7348,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-pwa@npm:^5.2.24":
-  version: 5.2.24
-  resolution: "next-pwa@npm:5.2.24"
+"next-pwa@npm:^5.3.1":
+  version: 5.3.1
+  resolution: "next-pwa@npm:5.3.1"
   dependencies:
     babel-loader: ^8.2.2
     clean-webpack-plugin: ^3.0.0
     globby: ^11.0.4
     terser-webpack-plugin: ^5.1.4
-    workbox-webpack-plugin: ^6.1.5
-    workbox-window: ^6.1.5
+    workbox-webpack-plugin: ^6.2.4
+    workbox-window: ^6.2.4
   peerDependencies:
     next: ">=9.0.0"
-  checksum: 5c4860d1f0131bfab2a1d2c9fb47e1c003d829d90afabd0b79a4eb8aec9d8ba06daecfd02915a318c1870ab5a9677f8edfe20c1042a9cf27291219912687fa7e
+  checksum: 1c6f74243515ddffd4248355ae9e6a46424b3ae94ffa0db140d05dbcc59fbad839b2a6608e549aba37a7fb4908818dbd77241be0240e17a92b4b51078ec8b65d
   languageName: node
   linkType: hard
 
-"next@npm:11.1.0":
+"next@npm:^11.1.0":
   version: 11.1.0
   resolution: "next@npm:11.1.0"
   dependencies:
@@ -7443,25 +7445,25 @@ __metadata:
     "@emotion/babel-plugin": ^11.3.0
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
-    "@types/react": 17.0.17
+    "@types/react": ^17.0
     "@types/remark-prism": ^1.3.0
     chalk: ^4.1.2
     date-fns: ^2.23.0
-    esbuild: ^0.12.20
-    eslint: 7.32.0
-    eslint-config-next: 11.1.0
+    esbuild: ^0.12.22
+    eslint: ^7.32.0
+    eslint-config-next: ^11.1.0
     gray-matter: ^4.0.3
-    mdx-bundler: ^5.2.1
-    next: 11.1.0
+    mdx-bundler: ^6.0.1
+    next: ^11.1.0
     next-compose-plugins: ^2.2.1
     next-images: ^1.8.1
     next-mdx-remote: ^3.0.4
-    next-pwa: ^5.2.24
-    react: 17.0.2
-    react-dom: 17.0.2
-    react-ga4: ^1.0.4
-    rehype-katex: ^6.0.0
-    rehype-mathjax: ^4.0.0
+    next-pwa: ^5.3.1
+    react: ^17.0
+    react-dom: ^17.0
+    react-ga4: ^1.0.5
+    rehype-katex: ^6.0.1
+    rehype-mathjax: ^4.0.1
     rehype-sanitize: ^5.0.0
     rehype-stringify: ^9.0.1
     remark-math: ^5.0.0
@@ -7469,9 +7471,9 @@ __metadata:
     remark-prism: ^1.3.6
     remark-rehype: ^9.0.0
     sodb: ^3.0.0
-    typescript: 4.3.5
+    typescript: ^4.3.5
     unified: ^10.1.0
-    webpack: ^5.50.0
+    webpack: ^5.51.1
   languageName: unknown
   linkType: soft
 
@@ -8357,7 +8359,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:17.0.2":
+"react-dom@npm:^17.0":
   version: 17.0.2
   resolution: "react-dom@npm:17.0.2"
   dependencies:
@@ -8370,10 +8372,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-ga4@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "react-ga4@npm:1.0.4"
-  checksum: 5e962f1a706a225cb9ce0f8fd796d7c51535f98ea2a7a944564d762834b4b6d13afce97b35361d47ca15aefaa37751d957250591ca6b81d3f4231bcc12295f91
+"react-ga4@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "react-ga4@npm:1.0.5"
+  checksum: 8a938bd53e755fee149fe6ce0403287cf124f01f0de02b2121ab7d84a3d8025ca53f559f27a43f34d8176049abaab00960076385b849338695536955cf7aa4fb
   languageName: node
   linkType: hard
 
@@ -8398,7 +8400,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:17.0.2":
+"react@npm:^17.0":
   version: 17.0.2
   resolution: "react@npm:17.0.2"
   dependencies:
@@ -8545,36 +8547,36 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rehype-katex@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "rehype-katex@npm:6.0.0"
+"rehype-katex@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "rehype-katex@npm:6.0.1"
   dependencies:
     "@types/hast": ^2.0.0
     "@types/katex": ^0.11.0
-    hast-util-to-text: ^3.0.0
+    hast-util-to-text: ^3.1.0
     katex: ^0.13.0
     rehype-parse: ^8.0.0
     unified: ^10.0.0
     unist-util-remove-position: ^4.0.0
     unist-util-visit: ^4.0.0
-  checksum: 5c26337c4ea15cb71dd99d4c7856fb425434b79bea825f3a50c06d611f6ac68109ade0d91e60ab9b696799440e66293f724c81923ec1365c1385e1036784873a
+  checksum: b40c31be771d1a3e0b6fc76dffb11acb6e4d2f24fd54c056bd9eacb47a6c381e20c43191e85c669dd875814b50c577075a18d213c3e888f49c9fec194ec61cd9
   languageName: node
   linkType: hard
 
-"rehype-mathjax@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "rehype-mathjax@npm:4.0.0"
+"rehype-mathjax@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "rehype-mathjax@npm:4.0.1"
   dependencies:
     "@types/hast": ^2.0.0
     "@types/mathjax": ^0.0.36
     "@types/web": ^0.0.15
     hast-util-from-dom: ^4.0.0
-    hast-util-to-text: ^3.0.0
+    hast-util-to-text: ^3.1.0
     jsdom: ^16.0.0
     mathjax-full: ^3.0.0
     unified: ^10.0.0
     unist-util-visit: ^4.0.0
-  checksum: 70053f6a4745a2f7ba5f51a888226b977b0b120cf40957814e9a9dcb2133b0bbf97ee800519c6222c21233a82cba3d04904cd435bcd746380ef0a70210b17660
+  checksum: 97676e583bd78d9e24f5e330f26b1241c906e117430a3884e996703c2a045219ad6511a1c070cddf93535c5d3f8ff8695bf1ed04fbd623bac01259bb4602a628
   languageName: node
   linkType: hard
 
@@ -8619,13 +8621,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remark-frontmatter@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "remark-frontmatter@npm:3.0.0"
+"remark-frontmatter@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "remark-frontmatter@npm:4.0.0"
   dependencies:
-    mdast-util-frontmatter: ^0.2.0
-    micromark-extension-frontmatter: ^0.2.0
-  checksum: 33bbcf36a51ee4c3813106b933766e0dc4b2b50f8eb4da3a4c577ea0278335589b36b182fb2722c9857d0ea9932ac75368a5dff70c8cf2b74f4747c244068976
+    "@types/mdast": ^3.0.0
+    mdast-util-frontmatter: ^1.0.0
+    micromark-extension-frontmatter: ^1.0.0
+    unified: ^10.0.0
+  checksum: 7f3728716da980abb89c32fc42fcd595196c63a660b70d16fc38edfde8daf15492e6292453ea0df0bbfe0c06a62972d5baafd4f5ec6e05b181eef1676c1bbc06
   languageName: node
   linkType: hard
 
@@ -9967,7 +9971,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-typescript@4.3.5:
+typescript@^4.3.5:
   version: 4.3.5
   resolution: "typescript@npm:4.3.5"
   bin:
@@ -9977,7 +9981,7 @@ typescript@4.3.5:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.3.5#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.3.5#~builtin<compat/typescript>":
   version: 4.3.5
   resolution: "typescript@patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"
   bin:
@@ -10618,9 +10622,9 @@ typescript@4.3.5:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.50.0":
-  version: 5.50.0
-  resolution: "webpack@npm:5.50.0"
+"webpack@npm:^5.51.1":
+  version: 5.51.1
+  resolution: "webpack@npm:5.51.1"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.50
@@ -10651,7 +10655,7 @@ typescript@4.3.5:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 293bed1d9101ac127605f35a225a5cbc1bc89eac68d6e09e7feb3e284ec2693b3db7c1dd7710fadf6852f89ad39ed09413c35befa1cfc9738074b33299ac2b9e
+  checksum: 20060bc197a5e690f12e453e86bd89da5b91626a2032efa907122fe541fedc688b1d573e9f92f7b66f15c609808653e158408ebf7c94783723dfbf4ac894a4a7
   languageName: node
   linkType: hard
 
@@ -10935,7 +10939,7 @@ typescript@4.3.5:
   languageName: node
   linkType: hard
 
-"workbox-webpack-plugin@npm:^6.1.5":
+"workbox-webpack-plugin@npm:^6.2.4":
   version: 6.2.4
   resolution: "workbox-webpack-plugin@npm:6.2.4"
   dependencies:
@@ -10951,7 +10955,7 @@ typescript@4.3.5:
   languageName: node
   linkType: hard
 
-"workbox-window@npm:6.2.4, workbox-window@npm:^6.1.5":
+"workbox-window@npm:6.2.4, workbox-window@npm:^6.2.4":
   version: 6.2.4
   resolution: "workbox-window@npm:6.2.4"
   dependencies:
@@ -10983,7 +10987,7 @@ typescript@4.3.5:
   languageName: node
   linkType: hard
 
-"xdm@npm:2.0.0":
+"xdm@npm:^2.0.0":
   version: 2.0.0
   resolution: "xdm@npm:2.0.0"
   dependencies:
