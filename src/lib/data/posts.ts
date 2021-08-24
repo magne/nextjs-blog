@@ -17,9 +17,12 @@ export interface PostProperties extends BaseProperties {
 export interface PostFrontmatter {
   title: string
   content: string
-  date: Date
-  lead: string
+  path: string
   tags: string[]
+  featuredImage?: string
+  excerpt: string
+  created: Date
+  updated: Date
 }
 
 const postProperties = (filePath: string): PostProperties => {
@@ -78,7 +81,7 @@ export const getPosts = getFiles<PostFrontmatter, PostProperties>({
   defaultQueryParameters: {
     limit: 50,
     skip: 0,
-    orderBy: 'date',
+    orderBy: 'created',
     order: 'DESC'
   },
   predicate: postPredicate,

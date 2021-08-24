@@ -18,7 +18,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
       posts: await asyncMap(tag.posts, async (post) => {
         const data = await post.data
 
-        return replaceProperty(pick(data, ['title', 'href', 'date', 'lead']), 'date', (date) =>
+        return replaceProperty(pick(data, ['title', 'href', 'created', 'excerpt']), 'created', (date) =>
           date.toISOString()
         )
       })
@@ -49,11 +49,10 @@ export const TagPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
       <SEO title={`Tag / ${tag.name}`} />
       <div>
         <h2>{tag.name}</h2>
-        {posts.map(({ title, href, date, lead }) => {
+        {posts.map(({ title, href, created, excerpt }) => {
           return [
             <div key={`${href}-meta`} className="col-start-2">
-              {/* <PostDate date={date} /> */}
-              <Date dateString={date} />
+              <Date dateString={created} />
             </div>,
             <div key={`${href}-data`} className="col-start-3">
               <Link href={href}>
@@ -61,7 +60,7 @@ export const TagPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> =
                   <a>{title}</a>
                 </h3>
               </Link>
-              <p>{lead}</p>
+              <p>{excerpt}</p>
             </div>
           ]
         })}

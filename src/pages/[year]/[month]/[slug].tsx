@@ -42,8 +42,8 @@ export const getStaticProps = async ({
     return {
       props: {
         post: replaceProperty(
-          pick(await post.data, ['slug', 'title', 'lead', 'href', 'tags', 'year', 'month', 'date']),
-          'date',
+          pick(await post.data, ['slug', 'title', 'created']),
+          'created',
           (date) => date.toISOString()
         ),
         variant,
@@ -71,7 +71,7 @@ const PostPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ po
       <article>
         <h1 className={utilStyles.headingXl}>{post.title}</h1>
         <div className={utilStyles.lightText}>
-          <Date dateString={post.date} />
+          <Date dateString={post.created} />
         </div>
         <MDX variant={variant} source={source} />
       </article>

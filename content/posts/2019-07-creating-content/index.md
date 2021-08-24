@@ -1,8 +1,5 @@
 ---
 title: "Creating content"
-date: 2019-07-21
-lead: How to create pages, posts and manage tags.
-
 path: "/creating-content"
 tags: ["Theme"]
 featuredImage: "./cover.jpg"

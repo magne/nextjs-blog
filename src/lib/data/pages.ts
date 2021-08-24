@@ -1,7 +1,9 @@
+import fs from 'fs'
 import path from 'path'
+import { CONTENT_DIRECTORY } from 'src/config'
 import { BaseProperties, file, getFiles } from './file'
 
-export const PAGES_DIRECTORY = path.join(process.cwd(), 'content', 'pages')
+export const PAGES_DIRECTORY = path.join(CONTENT_DIRECTORY, 'pages')
 
 export interface PageProperties extends BaseProperties {
   /** The page slug, used for linking */
@@ -12,10 +14,13 @@ export interface PageProperties extends BaseProperties {
 interface PageFrontmatter {
   title: string
   content: string
+  path: string
+  permalink?: string
+  excerpt: string
 }
 
 const pageProperties = (filePath: string): PageProperties => {
-  const slug = path.basename(filePath).replace('.mdx', '')
+  const slug = path.basename(filePath).replace(/\.mdx?/, '')
 
   return {
     slug,
@@ -41,7 +46,10 @@ export const getPage = (filePath: string) => {
 }
 
 export const getPageBySlug = (slug: string) => {
-  const filePath = path.join(PAGES_DIRECTORY, `${slug}.mdx`)
+  let filePath = path.join(PAGES_DIRECTORY, `${slug}.mdx`)
+  if (!fs.existsSync(filePath)) {
+    filePath = path.join(PAGES_DIRECTORY, `${slug}.md`)
+  }
 
   return getPage(filePath)
 }

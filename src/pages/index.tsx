@@ -11,7 +11,7 @@ import { replaceProperty } from '../utils/functions/replace-property'
 
 export const getStaticProps = async ({}: GetStaticPropsContext) => {
   const posts = await asyncMap(await getPosts(), async (post) => {
-    return replaceProperty(pick(await post.data, ['slug', 'title', 'href', 'date', 'lead']), 'date', (date) =>
+    return replaceProperty(pick(await post.data, ['slug', 'title', 'href', 'created', 'excerpt']), 'created', (date) =>
       date.toISOString()
     )
   })
@@ -38,16 +38,16 @@ const IndexPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ p
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
-          {posts.map(({ title, href, date, lead }) => (
+          {posts.map(({ title, href, created, excerpt }) => (
             <li className={utilStyles.listItem} key={href}>
               <Link href={href}>
                 <a>{title}</a>
               </Link>
               <br />
               <small className={utilStyles.lightText}>
-                <Date dateString={date} />
+                <Date dateString={created} />
               </small>
-              <p>{lead}</p>
+              <p>{excerpt}</p>
             </li>
           ))}
         </ul>
