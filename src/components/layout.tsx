@@ -1,58 +1,26 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import utilStyles from '../styles/utils.module.css'
+import { Footer } from './footer'
+import { Header } from './header'
 import styles from './layout.module.css'
-
-const name = 'Your Name'
 
 export default function Layout({ children, home }: { children: React.ReactNode; home?: boolean }) {
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
+    <>
+      <Header className={styles.header} home={home} />
+      <main>
+        <div className={styles.container}>
+          {children}
+          {!home && (
+            <div className={styles.backToHome}>
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <a>← Back to home</a>
               </Link>
-            </h2>
-          </>
-        )}
-      </header>
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
+            </div>
+          )}
         </div>
-      )}
-      <footer />
-    </div>
+      </main>
+      <Footer />
+    </>
   )
 }
