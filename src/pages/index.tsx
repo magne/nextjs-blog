@@ -1,8 +1,8 @@
 import { GetStaticPropsContext, InferGetStaticPropsType, NextPage } from 'next'
-import Head from 'next/head'
 import Link from 'next/link'
+import SEO from 'src/components/seo'
 import Date from '../components/date'
-import Layout, { siteTitle } from '../components/layout'
+import Layout from '../components/layout'
 import { getPosts } from '../lib/data/posts'
 import utilStyles from '../styles/utils.module.css'
 import { asyncMap } from '../utils/functions/async-map'
@@ -26,9 +26,7 @@ export const getStaticProps = async ({}: GetStaticPropsContext) => {
 const IndexPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ posts }) => {
   return (
     <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+      <SEO />
       <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
         <p>

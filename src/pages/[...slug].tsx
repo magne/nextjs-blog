@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType, NextPage } from 'next'
-import Head from 'next/head'
+import SEO from 'src/components/seo'
 import Layout from '../components/layout'
 import { Content } from '../components/MDX'
 import { getPageBySlug, getPages } from '../lib/data/pages'
@@ -29,12 +29,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false }
 }
 
-const Page: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ page, variant, source }) => {
+const Page: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  page,
+  variant,
+  source
+}) => {
   return (
     <Layout>
-      <Head>
-        <title>{page.title}</title>
-      </Head>
+      <SEO title={page.title} />
       <Content heading={page.title} variant={variant} source={source} />
     </Layout>
   )

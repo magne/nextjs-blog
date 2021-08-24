@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType, NextPage } from 'next'
 import Head from 'next/head'
+import SEO from 'src/components/seo'
 import Date from '../../../components/date'
 import Layout from '../../../components/layout'
 import { MDX } from '../../../components/MDX'
@@ -57,8 +58,8 @@ export const getStaticProps = async ({
 const PostPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ post, variant, source }) => {
   return (
     <Layout>
+      <SEO title={post.title} />
       <Head>
-        <title>{post.title}</title>
         <link rel="stylesheet" href="https://unpkg.com/prismjs/themes/prism-okaidia.css"></link>
         <link
           rel="stylesheet"

@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType, NextPage } from 'next'
-import Head from 'next/head'
 import Link from 'next/link'
+import SEO from 'src/components/seo'
 import Date from '../../components/date'
 import Layout from '../../components/layout'
 import { getTag, getTags } from '../../lib/data/tags'
@@ -18,7 +18,9 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
       posts: await asyncMap(tag.posts, async (post) => {
         const data = await post.data
 
-        return replaceProperty(pick(data, ['title', 'href', 'date', 'lead']), 'date', (date) => date.toISOString())
+        return replaceProperty(pick(data, ['title', 'href', 'date', 'lead']), 'date', (date) =>
+          date.toISOString()
+        )
       })
     }
   }
@@ -38,12 +40,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export const TagPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ tag, posts }) => {
+export const TagPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
+  tag,
+  posts
+}) => {
   return (
     <Layout>
-      <Head>
-        <title>Tag / ${tag.name}</title>
-      </Head>
+      <SEO title={`Tag / ${tag.name}`} />
       <div>
         <h2>{tag.name}</h2>
         {posts.map(({ title, href, date, lead }) => {
