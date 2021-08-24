@@ -1,9 +1,10 @@
 import { constants, existsSync, statSync } from 'fs'
 import { access, stat } from 'fs/promises'
 import path from 'path'
+import { CONTENT_DIRECTORY } from 'src/config'
 import { BaseProperties, file, getFiles } from './file'
 
-const POSTS_DIRECTORY = path.join(process.cwd(), 'content', 'posts')
+const POSTS_DIRECTORY = path.join(CONTENT_DIRECTORY, 'posts')
 
 export interface PostProperties extends BaseProperties {
   /** The post's slug, used for linking */
@@ -85,18 +86,20 @@ export const getPosts = getFiles<PostFrontmatter, PostProperties>({
 })
 
 export const getPost = (filePath: string) => {
-  return file<PostFrontmatter, PostProperties>(
-    filePath,
-    postProperties(filePath)
-  )
+  return file<PostFrontmatter, PostProperties>(filePath, postProperties(filePath))
 }
 
 export const getPostFromSlug = (year: string, month: string, slug: string) => {
   const rootPath = path.join(POSTS_DIRECTORY, [year, month, slug].join('-'))
-  const filePaths = [path.join(rootPath, 'index.mdx'), path.join(rootPath, 'index.md'), [rootPath, 'mdx'].join('.'), [rootPath, 'md'].join('.')]
+  const filePaths = [
+    path.join(rootPath, 'index.mdx'),
+    path.join(rootPath, 'index.md'),
+    [rootPath, 'mdx'].join('.'),
+    [rootPath, 'md'].join('.')
+  ]
   const filePath = filePaths.find((path) => existsSync(path))
   if (filePath) {
-  return getPost(filePath)
+    return getPost(filePath)
   }
   throw 'Post not found'
 }

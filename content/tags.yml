@@ -1,0 +1,17 @@
+- name: Uncategorized
+  color: '#000'
+  icon: null
+  featured: false
+- name: Programming
+  color: "#007acc"
+  icon: ./assets/images/typescript.svg
+  featured: true
+- name: Theme
+  color: "#00ffee"
+  icon: ./assets/images/logo.png
+  featured: true
+- name: Demo
+  color: "#f0db4f"
+  icon: ./assets/images/javascript.svg
+  featured: true
+- name: Dummy
