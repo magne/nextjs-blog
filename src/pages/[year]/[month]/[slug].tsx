@@ -60,7 +60,7 @@ const PostPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ po
     <Layout>
       <SEO title={post.title} />
       <Head>
-        <link rel="stylesheet" href="https://unpkg.com/prismjs/themes/prism-okaidia.css"></link>
+        <link rel="stylesheet" href="https://unpkg.com/prismjs@1.24.1/themes/prism-okaidia.css"></link>
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"
