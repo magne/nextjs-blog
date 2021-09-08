@@ -25,7 +25,7 @@ const pageProperties = (filePath: string): PageProperties => {
   return {
     slug,
     href: `/${slug}`,
-    bundleDirectory: `/img/pages/${slug}/`
+    bundleDirectory: `/assets/pages/${slug}/`
   }
 }
 

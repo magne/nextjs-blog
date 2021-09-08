@@ -1,7 +1,6 @@
 import { GetStaticPropsContext, InferGetStaticPropsType, NextPage } from 'next'
-import Link from 'next/link'
+import { Card } from 'src/components/card'
 import SEO from 'src/components/seo'
-import Date from '../components/date'
 import Layout from '../components/layout'
 import { getPosts } from '../lib/data/posts'
 import utilStyles from '../styles/utils.module.css'
@@ -11,8 +10,18 @@ import { replaceProperty } from '../utils/functions/replace-property'
 
 export const getStaticProps = async ({}: GetStaticPropsContext) => {
   const posts = await asyncMap(await getPosts(), async (post) => {
-    return replaceProperty(pick(await post.data, ['slug', 'title', 'href', 'created', 'excerpt']), 'created', (date) =>
-      date.toISOString()
+    return replaceProperty(
+      pick(await post.data, [
+        'slug',
+        'title',
+        'href',
+        'created',
+        'excerpt',
+        'featuredImage',
+        'tags'
+      ]),
+      'created',
+      (date) => date.toISOString()
     )
   })
 
@@ -38,17 +47,18 @@ const IndexPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ p
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
-          {posts.map(({ title, href, created, excerpt }) => (
-            <li className={utilStyles.listItem} key={href}>
-              <Link href={href}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={created} />
-              </small>
-              <p>{excerpt}</p>
-            </li>
+          {posts.map(({ ...post }, index) => (
+            <Card
+              key={index}
+              title={post.title}
+              href={post.href}
+              content={post.excerpt}
+              featuredImage={post.featuredImage}
+              meta={{
+                time: post.created,
+                tag: post.tags ? (post.tags.length > 0 ? post.tags[0] : undefined) : undefined
+              }}
+            />
           ))}
         </ul>
       </section>

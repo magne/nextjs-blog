@@ -41,7 +41,7 @@ const postProperties = (filePath: string): PostProperties => {
     month,
     slug: slug.join('-'),
     href,
-    bundleDirectory: `/img/posts${href}`
+    bundleDirectory: `/assets/posts${href}`
   }
 }
 
